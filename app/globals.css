@@ -1,27 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  @apply text-[62.5%];
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-[1.6rem] bg-white-10;
 }
+.card {
+  @apply p-10 rounded-3xl bg-white;
+}
+.btn {
+  @apply px-10 py-5 rounded-xl;
+}
+.btn-primary {
+  @apply bg-primary-100;
+}
+.sc::-webkit-scrollbar{
+  width: 0.1rem;
+
+}
+.sc::-webkit-slider-thumb{
+  background: transparent;
+}
+.sc::-webkit-scrollbar-track{
+background: transparent;
+}
+
